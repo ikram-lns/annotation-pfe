@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'form.css' %}">
+</head>
+{% extends 'monapp/formulaire.html' %}
+
+{% block content %}
+
+<h1>Contact Us</h1>
+<body>
+<form action="" method="post" novalidate>
+{% csrf_token %}
+{{ form }}
+{{ form.as_p }}
+<input type="submit" value="Envoyer">
+</form>
+</body>
+</html>

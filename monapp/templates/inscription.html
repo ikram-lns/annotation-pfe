@@ -1,0 +1,42 @@
+<html>
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'inscription.css' %}"></head>
+<body>
+<div class="form-style-10">
+    <h1>Inscrivez-Vous<span>Voulez-vous devenir Annotateur, inscrivez-vous maintenant!</span></h1>
+    <form action="" method = "post">
+        {% if form.errors %}
+        {{ form.errors }}
+    {% endif %}
+    {% csrf_token %}
+        {{ form }}
+        <div class="section"><span>1</span></div>
+        <div class="inner-wrap">
+            <label>Votre nom<input type="text" name="field1" /></label>
+            <label>Votre prenom<input type="text" name="field1" /></label>
+            <label for="birthday">Date De Naissance</label>
+            <input type="date" id="birthday" name="birthday">
+        </div>
+        
+        <div class="section"><span>2</span>Email</div>
+        <div class="inner-wrap">
+            <label>Email <input type="email" name="field3" /></label>
+        </div>
+    
+        <div class="section"><span>3</span>Mot de passe</div>
+            <div class="inner-wrap">
+            <label>Mot de passe <input type="password" name="field5" /></label>
+            <label>Confirmer votre mon de passe <input type="password" name="field6" /></label>
+            <label>Voulez-vous mentionnez quelque chose? <textarea name="field2"></textarea></label>
+        </div>
+        <div class="button-section">
+         <input type="submit" name="Sign Up" />
+         <span class="privacy-policy">
+         <input type="checkbox" name="field7">. 
+         </span>
+        </div>
+    </form>
+    </div>
+</body>
+    </html>

@@ -1,0 +1,21 @@
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Notre Formulaire d'Annotation</title>
+{% load static %}
+</head>
+<body>
+  
+<form action="" method = "post">
+    {% if form.errors %}
+    {{ form.errors }}
+{% endif %}
+{% csrf_token %}
+    {{ form }}
+
+    <input type="submit" value="Envoyer le formulaire" class ="btn btn-success">
+</form>    
+
+</body>
+</html>
