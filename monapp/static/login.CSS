@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   align-items: center;
   background: #f2f4f8;
   border: 0;
@@ -38,7 +39,8 @@ form {
   overflow: hidden;
 }
 
-form .email, form .email a {
+form .email,
+form .email a {
   color: hsl(var(--fgColorH), var(--fgColorS), var(--fgColorL));
   font-size: 0.825rem;
   order: 4;
@@ -60,7 +62,7 @@ form a:focus {
   outline-offset: 2px;
 }
 
-form > div {
+form>div {
   order: 2;
 }
 
@@ -73,7 +75,7 @@ label {
   order: 3;
 }
 
-label > span {
+label>span {
   color: var(--borderDarker);
   display: block;
   font-size: 0.825rem;
@@ -82,7 +84,7 @@ label > span {
   transition: all 0.25s;
 }
 
-label > span.required::after {
+label>span.required::after {
   content: "*";
   color: #dd6666;
   margin-left: 0.125rem;
@@ -102,7 +104,7 @@ label input[name="password"] {
   -webkit-text-security: disc;
 }
 
-input[name="show-password"]:checked ~ div label input[name="password"] {
+input[name="show-password"]:checked~div label input[name="password"] {
   -webkit-text-security: none;
 }
 
@@ -110,20 +112,20 @@ label:hover span {
   color: hsl(var(--fgColorH), var(--fgColorS), var(--fgColorL));
 }
 
-input[type="checkbox"] + div label:hover span::before,
+input[type="checkbox"]+div label:hover span::before,
 label:hover input.text {
   border-color: hsl(var(--fgColorH), var(--fgColorS), var(--fgColorL));
 }
 
 label input.text:focus,
 label input.text:active {
-  border-color:  hsl(var(--fgColorH), calc(var(--fgColorS) * 2), calc(var(--fgColorL) * 1.15));
-  box-shadow: 0 1px  hsl(var(--fgColorH), calc(var(--fgColorS) * 2), calc(var(--fgColorL) * 1.15));
+  border-color: hsl(var(--fgColorH), calc(var(--fgColorS) * 2), calc(var(--fgColorL) * 1.15));
+  box-shadow: 0 1px hsl(var(--fgColorH), calc(var(--fgColorS) * 2), calc(var(--fgColorL) * 1.15));
 }
 
-input.text:focus + span,
-input.text:active + span {
-  color:  hsl(var(--fgColorH), calc(var(--fgColorS) * 2), calc(var(--fgColorL) * 1.15));
+input.text:focus+span,
+input.text:active+span {
+  color: hsl(var(--fgColorH), calc(var(--fgColorS) * 2), calc(var(--fgColorL) * 1.15));
 }
 
 input {
@@ -151,9 +153,10 @@ input[type="submit"] {
   outline-offset: 2px;
   padding-left: 0;
   text-transform: uppercase;
+  width:100%;
 }
 
-input[type="checkbox"]:focus + label span::before,
+input[type="checkbox"]:focus+label span::before,
 input[type="submit"]:focus {
   outline: 1px dashed hsl(var(--fgColorH), calc(var(--fgColorS) * 2), calc(var(--fgColorL) * 1.15));
   outline-offset: 2px;
@@ -179,12 +182,12 @@ input[type="submit"]:active {
   left: -1000em;
 }
 
-input[type="checkbox"] + label span {
+input[type="checkbox"]+label span {
   padding-left: 1.25rem;
   position: relative;
 }
 
-input[type="checkbox"] + label span::before {
+input[type="checkbox"]+label span::before {
   content: "";
   display: block;
   position: absolute;
@@ -195,11 +198,11 @@ input[type="checkbox"] + label span::before {
   border: 1px solid var(--borderDark);
   border-radius: var(--borderRadius);
   transition: all 0.25s;
-  outline:1px dashed transparent;
+  outline: 1px dashed transparent;
   outline-offset: 2px;
 }
 
-input[type="checkbox"]:checked + label span::after {
+input[type="checkbox"]:checked+label span::after {
   content: "";
   display: block;
   position: absolute;
@@ -210,7 +213,7 @@ input[type="checkbox"]:checked + label span::after {
   border: 1px solid var(--borderDark);
   border-radius: var(--borderRadius);
   transition: all 0.25s;
-  outline:1px dashed transparent;
+  outline: 1px dashed transparent;
   outline-offset: 2px;
   background: hsl(var(--fgColorH), var(--fgColorS), var(--fgColorL));
 }
@@ -220,9 +223,9 @@ figure {
   --skinH: 30;
   --skinS: 100%;
   --skinL: 87%;
-  --hair: rgb(180,70,60);
+  --hair: rgb(180, 70, 60);
   background: hsl(var(--fgColorH), calc(var(--fgColorS) * 2), 95%);
-  border: 1px solid rgba(0,0,0,0.0625);
+  border: 1px solid rgba(0, 0, 0, 0.0625);
   border-radius: 50%;
   height: 0;
   margin: auto auto;
@@ -253,7 +256,7 @@ figure .head {
   box-shadow: 0 -0.175rem 0 0.125rem var(--hair);
 }
 
-figure  .ears {
+figure .ears {
   top: 47%;
   left: 50%;
   white-space: nowrap;
@@ -277,18 +280,26 @@ figure .head .eyes {
 }
 
 @-webkit-keyframes blink {
-  0%, 90%, 100% {
+
+  0%,
+  90%,
+  100% {
     height: 10px;
   }
+
   95% {
     height: 0;
   }
 }
 
 @keyframes blink {
-  0%, 90%, 100% {
+
+  0%,
+  90%,
+  100% {
     height: 10px;
   }
+
   95% {
     height: 0px;
   }
@@ -308,8 +319,8 @@ figure .head .eyes::after {
   transition: all 0.15s;
 }
 
-input[name="show-password"]:checked ~ figure .head .eyes::before,
-input[name="show-password"]:checked ~ figure .head .eyes::after {
+input[name="show-password"]:checked~figure .head .eyes::before,
+input[name="show-password"]:checked~figure .head .eyes::after {
   height: 0.125rem;
   animation: none;
 }
@@ -390,4 +401,41 @@ figure .shirt-2 {
 figure .shirt-2 {
   left: 52.5%;
   transform: skew(10deg) rotate(-15deg)
+}
+
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* /center */
+
+.center form {
+  width: 100%;
+  height: 100%;
+}
+
+/* /form */
+
+.center form p {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* /p */
+
+.center form p a {
+  text-decoration: none;
+}
+
+/* /a */
+
+.center form div input{
+  width: 100%;
 }

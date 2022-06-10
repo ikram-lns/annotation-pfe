@@ -28,7 +28,7 @@ urlpatterns = [
     path('formpage/',views.form_view,name='form'),
     path('contact/',views.contact),
     path('about/',views.about),
-    path('inscription/',views.inscriptions),
+    path('inscription/',views.inscriptions,name="inscription"),
     
 
 ]
